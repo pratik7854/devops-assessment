@@ -13,6 +13,13 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest
+    env:
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_USER: ci_test_user
+      DB_PASSWORD: ci_test_password
+      DB_NAME: ci_test_db
+      JWT_SECRET: ci_test_jwt_secret
 
     steps:
       - name: Checkout code
